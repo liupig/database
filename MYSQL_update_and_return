@@ -1,0 +1,11 @@
+--开启事务
+begin;
+--进行更新
+set @my_current_name='';
+update up_test set user_name='testname', id=(select @my_current_name :=id) where user_name='xx';
+-- 按照获取的主键值查询更新行
+select * from up_test where id = @my_current_name;
+--提交
+commit;
+
+by xiaoshan;
