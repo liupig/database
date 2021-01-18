@@ -1,0 +1,1 @@
+update up_test set name='mingming' RETURNING *
