@@ -6,3 +6,7 @@ CREATE TABLE IF NOT EXISTS teble_name (
     lat STRING
 )
 PARTITIONED BY (lon STRING, lat STRING) row format delimited fields terminated by '\t';
+
+后添加属性：如分隔符：
+alter table poi_track_data set serdeproperties('field.delim'='\t');
+alter table poi_track_data set serdeproperties('serialization.format'='\t');
