@@ -1,7 +1,7 @@
-查看表信息：desc formatted ezia_cp.poi_track_data_test
+查看表信息：desc formatted dbname.teble_name
 
 创建表，分区并设置分隔符：
-CREATE TABLE IF NOT EXISTS poi_track_data (
+CREATE TABLE IF NOT EXISTS teble_name (
     lon STRING,
     lat STRING
 )
