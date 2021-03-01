@@ -1,0 +1,8 @@
+查看表信息：desc formatted ezia_cp.poi_track_data_test
+
+创建表，分区并设置分隔符：
+CREATE TABLE IF NOT EXISTS poi_track_data (
+    lon STRING,
+    lat STRING
+)
+PARTITIONED BY (lon STRING, lat STRING) row format delimited fields terminated by '\t';
