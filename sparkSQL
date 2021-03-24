@@ -1,3 +1,3 @@
 delta_data_df.coalesce(10).write.jdbc(url=mysql_url, table=_TABLE, mode=write_mode,
                                  properties=properties)
-   合理使用coalesce(),速度更快,拒绝默认
+   合理使用coalesce()合并分区,速度更快,拒绝默认
